@@ -1,0 +1,213 @@
+/* src/styles.css */
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #004385; /* Light text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px; /* Ensure spacing for small screen devices */
+}
+
+/* Container for login and signup */
+.container {
+  background-color: #1e1e1e; /* Dark background for container */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Header style */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #300051; /* Green color for header */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #333; /* Dark borders */
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 4px;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #300051;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login{
+  margin-left: 50px;
+}
+
+.signup{
+  margin-left: 20px;
+}
+
+button:hover {
+  background-color: #300051;
+}
+
+/* Chat room page */
+.chat-container {
+  width: 1000px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  height: 90vh; /* Chat takes up 90% of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Chat window (messages) */
+.messages {
+  flex-grow: 1;
+  max-height: 70vh; /* Restrict the height of messages area */
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #333; /* Dark message area */
+  border-radius: 5px;
+  border: 1px solid #444; /* Slightly lighter border */
+}
+
+/* Message styling */
+.message {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  word-wrap: break-word;
+}
+
+.message strong {
+  color: #300051; /* Green text for sender name */
+}
+
+/* Different styles for sender/receiver messages */
+.message.sent {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  align-self: flex-end;
+}
+
+.message.received {
+  background-color: #555; /* Darker background for received messages */
+  color: #e0e0e0;
+  align-self: flex-start;
+}
+
+/* Typing indicator (above the text input) */
+.typing-indicator {
+  font-style: italic;
+  color: #aaa; /* Lighter grey for typing indicator */
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Input and Send button */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.chat-input input {
+  padding: 12px;
+  font-size: 16px;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #444; /* Dark border */
+  background-color: #333; /* Dark background for input */
+  color: #e0e0e0;
+}
+
+.chat-input button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #00244b; /* Blue send button */
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.chat-input button:hover {
+  background-color: #162b40;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #500500; /* Red logout button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background-color: #500500;
+}
+
+/* Chat container responsiveness */
+@media (max-width: 600px) {
+  .chat-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .chat-input input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .chat-input button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .messages {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    font-size: 14px;
+  }
+}
